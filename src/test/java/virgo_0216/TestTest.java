@@ -30,4 +30,9 @@ public class TestTest {
         String str = "abcd";
         System.out.println(new virgo_0216.Test().exist(board, str));
     }
+
+    @Test
+    public void restoreIpAddresses() {
+        System.out.println("123456".substring(3,6));
+    }
 }

@@ -41,6 +41,7 @@ public class Test {
         return result;
     }
 
+    // https://leetcode-cn.com/problems/combination-sum/
     public List<List<Integer>> combinationSum(int[] candidates, int target) {
         List<List<Integer>> result = new ArrayList<>();
         Arrays.sort(candidates);

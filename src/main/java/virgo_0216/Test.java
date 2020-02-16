@@ -36,6 +36,7 @@ public class Test {
         return dp[n];
     }
 
+    // https://leetcode-cn.com/problems/factor-combinations/
     public List<List<Integer>> getFactors(int n) {
         List<List<Integer>> result = new ArrayList<>();
         backtrace(n, new ArrayList<>(), result, 2);
@@ -55,6 +56,7 @@ public class Test {
         }
     }
 
+    //https://leetcode-cn.com/problems/word-search/
     public boolean exist(char[][] board, String word) {
         int[][] help = new int[board.length][];
         for (int k = 0; k < help.length; k++) {
@@ -93,5 +95,33 @@ public class Test {
 
     private boolean isInArea(char[][] board, int[] next) {
         return next[0] < board.length && next[1] < board[0].length && next[0] >= 0 && next[1] >= 0;
+    }
+
+    public List<String> restoreIpAddresses(String s) {
+        List<String> list = new ArrayList<>();
+        for (int i = 1; i <= 3; i++) {
+            for (int j = 1; j <= 3; j++) {
+                for (int k = 1; k <= 3; k++) {
+                    int last = s.length() - i - j - k;
+                    if (0 < last && last <= 3) {
+                        int ip1 = Integer.parseInt(s.substring(0, i));
+                        int ip2 = Integer.parseInt(s.substring(i, i + j));
+                        int ip3 = Integer.parseInt(s.substring(i + j, i + j + k));
+                        int ip4 = Integer.parseInt(s.substring(i + j + k));
+                        if (inRange(ip1) && inRange(ip2) && inRange(ip3) && inRange(ip4)) {
+                            String ip = ip1 + "." + ip2 + "." + ip3 + "." + ip4;
+                            if (ip.length() == s.length()+3) {
+                                list.add(ip);
+                            }
+                        }
+                    }
+                }
+            }
+        }
+        return list;
+    }
+
+    private boolean inRange(int ip) {
+        return ip >= 0 && ip <= 255;
     }
 }
