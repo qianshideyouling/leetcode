@@ -1,6 +1,5 @@
 import org.junit.Test;
-
-import static org.junit.Assert.*;
+import past.Solution3;
 
 public class Solution3Test {
 

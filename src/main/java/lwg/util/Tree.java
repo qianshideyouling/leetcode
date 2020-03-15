@@ -32,6 +32,14 @@ public class Tree<T> {
         }
     }
 
+    void read(TreeNode treeNode) {
+        if (null != treeNode) {
+            System.out.println(treeNode.value);
+            read(treeNode.left);
+            read(treeNode.right);
+        }
+    }
+
     List<T> broadFirst() {
         Queue<TreeNode<T>> queue = new LinkedList<TreeNode<T>>();
         List<T> list = new ArrayList<T>();
