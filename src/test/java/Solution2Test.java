@@ -1,10 +1,9 @@
 import org.junit.Test;
+import past.Solution2;
 
 import java.util.ArrayList;
 import java.util.Arrays;
 import java.util.List;
-
-import static org.junit.Assert.*;
 
 public class Solution2Test {
 
@@ -15,7 +14,7 @@ public class Solution2Test {
         List<Integer> li2 = Arrays.asList(1, 2);
         array.add(li1);
         array.add(li2);
-//        new Solution2().minimumTotal(array);
+//        new past.Solution2().minimumTotal(array);
         ArrayList<String> wordList = new ArrayList<>(Arrays.asList("hot","dot","dog","lot","log","cog"));
         System.out.println(new Solution2().ladderLength("hit", "cog", wordList));
     }
