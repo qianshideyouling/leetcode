@@ -7,7 +7,7 @@ import java.util.stream.Collectors;
 
 
 public class Solution4 {
-    class TreeNode {
+    public class TreeNode {
         int val;
         TreeNode left;
         TreeNode right;
