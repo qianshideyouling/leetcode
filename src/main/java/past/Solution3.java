@@ -3,7 +3,7 @@ package past;
 import java.util.*;
 
 public class Solution3 {
-    static Map<String, Integer> in = new HashMap<String, Integer>();
+    static Map<String, Integer> in = new HashMap<>();
 
     static {
         in.put("*", 2);
